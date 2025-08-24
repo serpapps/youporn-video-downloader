@@ -1,0 +1,11 @@
+{
+  "name": "youporn-video-downloader",
+  "tagline": ""Extract YouPorn videos with VR support and premium features"",
+  "description": "Download tool for youporn-video-downloader",
+  "github_repo_url": "https://github.com/serpapps/youporn-video-downloader",
+  "purchase_url": "https://serp.ly/youpo-downloader",
+  "featured_image": "images/youporn-video-downloader.jpg",
+  "featured_image_gif": "images/youporn-video-downloader.gif",
+  "features": ["Download support", "High quality", "Fast processing"],
+  "keywords": ["youporn-video-downloader", "downloader", "tool"]
+}
