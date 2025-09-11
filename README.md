@@ -2,6 +2,11 @@
 
 Downloads videos from YouPorn with advanced features including license activation, download management, and high-quality video extraction.
 
+- **Automatic Video Detection**: Instantly detects videos on YouPorn pages
+- **Multiple Quality Options**: Choose from available video qualities (SD, HD, Full HD)
+- **Smart Metadata Extraction**: Captures video title, thumbnail, duration, views, and uploader info
+- **Direct Downloads**: Download videos directly to your computer with original filenames
+
 
 ## 🔗 Links
 
@@ -20,11 +25,7 @@ Downloads videos from YouPorn with advanced features including license activatio
 
 ## Features
 
-### Core Functionality
-- **Automatic Video Detection**: Instantly detects videos on YouPorn pages
-- **Multiple Quality Options**: Choose from available video qualities (SD, HD, Full HD)
-- **Smart Metadata Extraction**: Captures video title, thumbnail, duration, views, and uploader info
-- **Direct Downloads**: Download videos directly to your computer with original filenames
+
 
 ### Advanced Download Management
 - **Real-time Progress Tracking**: Monitor download progress with detailed stats
