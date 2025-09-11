@@ -1,0 +1,177 @@
+{
+  "app": {
+    "name": "YouPorn Video Downloader",
+    "version": "1.0.0",
+    "description": "Professional Chrome extension for downloading YouPorn videos with advanced features",
+    "category": "Browser Extension",
+    "platform": "Chrome/Chromium",
+    "license": "Commercial License Required"
+  },
+  "features": {
+    "core": [
+      "Automatic video detection on YouPorn pages",
+      "Multiple video quality options (SD, HD, Full HD)",
+      "Smart metadata extraction (title, thumbnail, duration, views)",
+      "Direct video downloads with original filenames",
+      "Real-time download progress tracking",
+      "Download pause/resume/cancel functionality"
+    ],
+    "interface": [
+      "Professional popup interface with YouPorn branding",
+      "Player button overlay on video players",
+      "Right-click context menu integration",
+      "Slide-out download manager panel",
+      "Built-in help system and tooltips",
+      "Responsive design for all screen sizes"
+    ],
+    "advanced": [
+      "Advanced download manager with progress tracking",
+      "License key activation system",
+      "Gumroad integration for license management",
+      "Secure cloud license verification",
+      "Chrome Manifest V3 compliance",
+      "Service worker background processing",
+      "Offline download support",
+      "Robust error handling and recovery"
+    ],
+    "security": [
+      "Encrypted license storage",
+      "Secure API communication",
+      "No personal data collection",
+      "Local preference storage",
+      "No browsing activity tracking",
+      "Minimal permissions model"
+    ]
+  },
+  "technical": {
+    "manifest_version": 3,
+    "permissions": [
+      "downloads",
+      "activeTab", 
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "host_permissions": [
+      "https://youporn.com/*",
+      "https://www.youporn.com/*"
+    ],
+    "architecture": {
+      "background": "Service worker with enhanced download management",
+      "content_scripts": "Multi-script injection for video detection",
+      "popup": "React-style interface with real-time updates",
+      "offscreen": "Secure processing for sensitive operations"
+    },
+    "files": {
+      "background-enhanced.js": "Main service worker with download logic",
+      "content.js": "Page content analysis and video detection", 
+      "popup.js": "User interface and activation management",
+      "auth.js": "License verification and authentication",
+      "site-config.js": "Brand configuration and API endpoints",
+      "download-manager.js": "Advanced download UI components",
+      "player-button.js": "Video player overlay integration",
+      "logger.js": "Comprehensive logging system"
+    }
+  },
+  "installation": {
+    "requirements": {
+      "browser": "Chrome 88+ or Chromium-based browser",
+      "os": "Windows 10+, macOS 10.14+, or Linux",
+      "disk_space": "50MB+ available space",
+      "internet": "Required for license activation"
+    },
+    "steps": [
+      "Purchase license key from official product page",
+      "Download extension package (.crx or .zip)",
+      "Enable Developer mode in chrome://extensions/",
+      "Install extension via drag-drop or Load unpacked",
+      "Enter license key and email for activation"
+    ]
+  },
+  "usage": {
+    "primary_methods": [
+      "Extension popup from browser toolbar",
+      "Player button overlay on videos", 
+      "Right-click context menu option"
+    ],
+    "workflow": [
+      "Navigate to YouPorn video page",
+      "Extension automatically detects video",
+      "Select preferred quality from dropdown",
+      "Click Download Video button",
+      "Monitor progress in download manager"
+    ]
+  },
+  "monetization": {
+    "model": "License-based with Gumroad integration",
+    "tiers": [
+      {
+        "name": "Free Trial",
+        "description": "Limited downloads for evaluation",
+        "features": ["Basic download functionality", "Limited daily downloads"]
+      },
+      {
+        "name": "Full License", 
+        "description": "Unlimited downloads and premium features",
+        "features": ["Unlimited downloads", "All video qualities", "Download manager", "Priority support"]
+      },
+      {
+        "name": "Commercial License",
+        "description": "Business use with extended rights", 
+        "features": ["All Full License features", "Commercial usage rights", "Bulk licensing available"]
+      }
+    ],
+    "purchase_url": "https://serp.ly/youporn-video-downloader",
+    "verification": "Real-time cloud verification via secure worker API"
+  },
+  "supported_sites": [
+    "youporn.com",
+    "www.youporn.com"
+  ],
+  "video_formats": [
+    "MP4 (Multiple qualities)",
+    "Progressive download",
+    "Adaptive quality selection"
+  ],
+  "download_features": [
+    "Single video downloads",
+    "Custom download locations", 
+    "Original filename preservation",
+    "Download history tracking",
+    "Bandwidth monitoring",
+    "Speed optimization"
+  ],
+  "branding": {
+    "colors": {
+      "primary": "#ec567c",
+      "hover": "#d64a73", 
+      "background": "#1b1b1b",
+      "text": "#ffffff"
+    },
+    "styling": "Professional YouPorn-branded interface"
+  },
+  "compliance": {
+    "standards": ["Chrome Manifest V3", "Chrome Web Store policies"],
+    "security": ["Minimal permissions", "Secure storage", "Encrypted communication"],
+    "privacy": ["No data collection", "Local storage only", "No tracking"]
+  },
+  "support": {
+    "documentation": "Comprehensive README and help system",
+    "troubleshooting": "Built-in error handling and user guidance",
+    "contact": "Support available through product page"
+  },
+  "build_info": {
+    "build_date": "2025-09-09T04:48:37.200Z",
+    "build_type": "Production Chrome Extension",
+    "package": "Ready-to-install Chrome extension package",
+    "size": "~47KB compressed"
+  },
+  "legal": {
+    "disclaimer": "Not affiliated with YouPorn - independent download tool",
+    "usage": "Personal use only - respect content creators' rights",
+    "compliance": "User responsible for compliance with applicable laws"
+  }
+}
