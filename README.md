@@ -1,12 +1,173 @@
-# youporn-video-downloader
+# YouPorn Video Downloader
 
-This repository is being set up. README will be auto-generated soon.
+Downloads videos from YouPorn with advanced features including license activation, download management, and high-quality video extraction.
 
-## Links
-- [Product Page](https://serp.ly/youpo-downloader)
-- [GitHub Pages](https://serpapps.github.io/youporn-video-downloader)
+## Features
+
+### Core Functionality
+- **Automatic Video Detection**: Instantly detects videos on YouPorn pages
+- **Multiple Quality Options**: Choose from available video qualities (SD, HD, Full HD)
+- **Smart Metadata Extraction**: Captures video title, thumbnail, duration, views, and uploader info
+- **Direct Downloads**: Download videos directly to your computer with original filenames
+
+### Advanced Download Management
+- **Real-time Progress Tracking**: Monitor download progress with detailed stats
+- **Download Manager Panel**: Slide-out panel showing all active downloads
+- **Pause/Resume/Cancel**: Full control over your downloads
+- **Download History**: Track completed and failed downloads
+- **Bandwidth Monitoring**: View download speeds and estimated time remaining
+
+### User Interface
+- **Player Button Integration**: Download button overlay directly on the video player
+- **Context Menu Support**: Right-click anywhere on YouPorn pages to download
+- **Professional Popup Interface**: Clean, branded interface with easy navigation
+- **Help System**: Built-in help tooltips and quick help banners
+- **Responsive Design**: Works seamlessly across different screen sizes
+
+### Security & Licensing
+- **License Key Activation**: Secure activation system with email verification
+- **Gumroad Integration**: Professional license management and validation
+- **Secure Storage**: Encrypted storage of activation status and user preferences
+- **Cloud Verification**: Real-time license validation through secure worker API
+
+### Technical Features
+- **Manifest V3 Compliance**: Latest Chrome extension standards for security and performance
+- **Service Worker Background**: Efficient background processing without performance impact
+- **Offline Support**: Continue downloads even when browser tabs are closed
+- **Error Handling**: Robust error recovery and user feedback
+- **Memory Optimization**: Efficient memory usage for large file downloads
+
+## Installation
+
+### For End Users
+1. Purchase a license key from the official product page
+2. Download the extension package (.crx or .zip file)
+3. Open Chrome and navigate to `chrome://extensions/`
+4. Enable "Developer mode" in the top right corner
+5. Drag and drop the extension file or click "Load unpacked" for .zip files
+6. Enter your license key and email when prompted
+
+### For Developers
+1. Clone the repository
+2. Navigate to the `youporn` directory
+3. Install dependencies: `npm install`
+4. Load the extension in Chrome using developer mode
+
+## Usage
+
+### Basic Download
+1. Navigate to any YouPorn video page
+2. Click the extension icon in your browser toolbar
+3. Select your preferred video quality from the dropdown
+4. Click "Download Video"
+5. Choose your download location
+
+### Alternative Methods
+- **Player Button**: Click the download button overlay on the video player
+- **Context Menu**: Right-click on any video page and select "Download YouPorn Video"
+- **Download Manager**: Use the slide-out panel to manage multiple downloads
+
+### Managing Downloads
+- **View Progress**: Click the extension icon to see download progress
+- **Cancel Downloads**: Use the X button in the download manager
+- **Download History**: Review completed downloads and retry failed ones
+
+## How It Works
+
+The extension uses a sophisticated multi-layer architecture:
+
+### Frontend Components
+- **popup.js**: Main user interface with activation and download controls
+- **content.js**: Page content analysis and video detection
+- **player-button.js**: Overlay button integration with video players
+- **download-manager.js**: Advanced download management UI
+
+### Backend Processing
+- **background-enhanced.js**: Service worker handling downloads and API communication
+- **auth.js**: License verification and user authentication
+- **site-config.js**: Brand configuration and API endpoints
+
+### Security & Performance
+- **offscreen.js**: Secure processing for sensitive operations
+- **logger.js**: Comprehensive logging system for debugging
+- **Manifest V3**: Latest security standards and permissions model
+
+## Supported Features
+
+### Video Formats
+- MP4 (various qualities)
+- Progressive download support
+- Adaptive quality selection
+- Original filename preservation
+
+### Download Options
+- Single video downloads
+- Batch download support (planned)
+- Custom download locations
+- Automatic file organization
+
+### Browser Compatibility
+- Chrome (recommended)
+- Chromium-based browsers
+- Edge (Chromium)
+
+## Licensing
+
+This extension requires a valid license key for full functionality:
+
+- **Free Trial**: Limited downloads for evaluation
+- **Full License**: Unlimited downloads and premium features
+- **Commercial License**: Available for business use
+
+Purchase licenses at: [YouPorn Video Downloader](https://serp.ly/youporn-video-downloader)
+
+## Privacy & Security
+
+- **No Data Collection**: Your download history stays on your device
+- **Secure Authentication**: License verification through encrypted channels
+- **Local Storage**: All preferences stored locally on your computer
+- **No Tracking**: Extension doesn't track your browsing or download habits
+
+## Technical Requirements
+
+### System Requirements
+- Chrome 88+ or compatible Chromium browser
+- Windows 10+, macOS 10.14+, or Linux
+- 50MB+ available disk space
+- Internet connection for license activation
+
+### Permissions Explained
+- **downloads**: Required for saving videos to your computer
+- **activeTab**: Access current page to detect videos
+- **storage**: Store activation status and preferences
+- **notifications**: Show download completion alerts
+- **contextMenus**: Add right-click download option
+
+## Troubleshooting
+
+### Common Issues
+- **License Not Accepted**: Verify your email and license key are correct
+- **Downloads Not Starting**: Check if you're on a supported YouPorn page
+- **Slow Downloads**: Check your internet connection and available disk space
+- **Extension Not Loading**: Refresh the page and try again
+
+### Support
+For technical support or license issues, contact our support team through the product page.
+
+## Legal Notice
+
+This extension is for personal use only. Please respect content creators' rights and comply with all applicable laws and terms of service. The extension is designed for downloading content you have permission to download.
+
+## Version History
+
+- **v1.0.0**: Initial release with full download functionality and license system
+- Advanced download manager and progress tracking
+- Professional UI with YouPorn branding
+- Secure license activation system
 
 ---
+
+**Disclaimer**: This extension is not affiliated with YouPorn. It is an independent tool for personal video downloading purposes.
 
 # YouPorn Video Download Research: Technical Analysis of Stream Patterns, CDNs, and Download Methods
 
@@ -884,3 +1045,67 @@ The methodologies and tools documented in this research provide a robust foundat
 **Last Updated**: December 2024  
 **Research Version**: 1.0  
 **Next Review**: March 2025
+
+
+
+
+
+
+
+# YouPorn Video Downloader - Permissions Justification
+
+This document provides a detailed justification for each permission requested in the YouPorn Video Downloader extension manifest.
+
+## Used Permissions
+
+### 1. downloads
+**Justification**: Required for downloading YouPorn videos to the user's computer.
+**Usage**:
+- `background-enhanced.js:59` - Chrome downloads API call to cancel downloads
+- `background-enhanced.js:168` - Chrome downloads API call to initiate file downloads
+- `background-enhanced.js:269, 278, 282` - Event listeners for download state changes and progress monitoring
+- `popup.js:255` - Search for downloads by ID to get progress information
+
+### 2. activeTab
+**Justification**: Required to interact with the currently active tab for video detection and URL extraction.
+**Usage**:
+- Used implicitly through `chrome.tabs.query({active: true, currentWindow: true})` calls
+- `popup.js:30` - Gets current active tab
+- `background-enhanced.js:80, 137` - Gets active tab for video operations
+
+### 3. storage
+**Justification**: Required to store user activation status and license information.
+**Usage**:
+- `auth.js` - `saveActivation` stores activation status (isActivated, licenseKey, email)
+- `auth.js` - `checkActivationStatus` retrieves activation state on popup load
+
+### 4. notifications
+**Justification**: Required to show user notifications about download status and errors.
+**Usage**:
+- `background-enhanced.js:300` - Creates notifications using chrome.notifications.create()
+- Used for download completion and error notifications
+
+### 5. contextMenus
+**Justification**: Required to add "Download YouPorn Video" option to the browser's right-click context menu.
+**Usage**:
+- `background-enhanced.js:10` - Creates context menu item with chrome.contextMenus.create()
+- `background-enhanced.js:22` - Handles context menu clicks with chrome.contextMenus.onClicked
+- Context menu is scoped to YouPorn domains only
+
+### 6. tabs
+**Justification**: Required for tab communication, management, and opening new tabs.
+**Usage**:
+- `popup.js:30, 44, 318` - Tab queries, content script communication, creating new tabs
+- `background-enhanced.js:24, 80, 86, 137, 143, 316` - Tab messaging and content script communication
+
+## Host Permissions
+
+### Used Host Permissions
+- Host permissions would be declared in the manifest.json file for YouPorn domains
+
+## Recommended to Delete (Unused Permissions)
+
+### scripting
+**Status**: UNUSED
+**Reason**: No chrome.scripting API calls were found in the codebase. The extension uses statically declared content scripts in the manifest instead of dynamic script injection.
+**Recommendation**: Remove this permission to follow the principle of least privilege.
