@@ -6,7 +6,6 @@ Downloads videos from YouPorn with advanced features including license activatio
 ## 🔗 Links
 
 - 🎁 Get it [here](https://serp.ly/vimeo-video-downloader)
-- 🔒 View [Permissions Justification](PERMISSIONS.md)
 - ❓ Check FAQs [here](https://github.com/orgs/serpapps/discussions/categories/faq)
 - 🐛 Report bugs [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 - 🆕 Request features [here](https://github.com/serpapps/vimeo-video-downloader/issues)
