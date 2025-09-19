@@ -182,7 +182,7 @@ This extension is for personal use only. Please respect content creators' rights
 - Professional UI with YouPorn branding
 - Secure license activation system
 
----
+
 
 **Disclaimer**: This extension is not affiliated with YouPorn. It is an independent tool for personal video downloading purposes.
 
@@ -199,7 +199,7 @@ This extension is for personal use only. Please respect content creators' rights
 **Date**: December 2024  
 **Version**: 1.0
 
----
+
 
 ## Abstract
 
