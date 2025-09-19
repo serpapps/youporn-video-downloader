@@ -186,6 +186,11 @@ This extension is for personal use only. Please respect content creators' rights
 
 **Disclaimer**: This extension is not affiliated with YouPorn. It is an independent tool for personal video downloading purposes.
 
+
+<details>
+
+    <summary>How to download Youporn videos</summary>
+
 # YouPorn Video Download Research: Technical Analysis of Stream Patterns, CDNs, and Download Methods
 
 *A comprehensive research document analyzing YouPorn's video infrastructure, embed patterns, stream formats, and optimal download strategies using modern tools*
@@ -1126,3 +1131,8 @@ This document provides a detailed justification for each permission requested in
 **Status**: UNUSED
 **Reason**: No chrome.scripting API calls were found in the codebase. The extension uses statically declared content scripts in the manifest instead of dynamic script injection.
 **Recommendation**: Remove this permission to follow the principle of least privilege.
+
+
+
+
+</details>
